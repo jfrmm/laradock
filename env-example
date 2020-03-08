@@ -30,7 +30,7 @@ NETWORKS_DRIVER=bridge
 COMPOSE_FILE=docker-compose.yml
 
 # Change the separator from : to ; on Windows
-COMPOSE_PATH_SEPARATOR=;
+COMPOSE_PATH_SEPARATOR=:
 
 # Define the prefix of container names. This is useful if you have multiple projects that use laradock to have seperate containers per project.
 COMPOSE_PROJECT_NAME=expenses
@@ -235,10 +235,10 @@ APACHE_DOCUMENT_ROOT=/var/www/
 
 ### MYSQL #################################################
 
-MYSQL_VERSION=latest
+MYSQL_VERSION=5.7
 MYSQL_DATABASE=expenses
-MYSQL_USER=default
-MYSQL_PASSWORD=secret
+MYSQL_USER=dev
+MYSQL_PASSWORD=dev
 MYSQL_PORT=3306
 MYSQL_ROOT_PASSWORD=root
 MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
